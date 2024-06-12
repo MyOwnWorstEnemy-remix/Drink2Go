@@ -1,0 +1,40 @@
+.about {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+    flex-wrap: wrap;
+  }
+}
+
+.about__logo {
+  margin-right: 38px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 0;
+  }
+}
+
+.about__logo-text {
+  @media (min-width: $desktop-width) {
+    display: block;
+    width: 318px;
+    min-height: 32px;
+    position: relative;
+    font-size: 14px;
+    line-height: 20px;
+    color: $text-color-primary;
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $color-secondary;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.copyright {
+  color: #bdbdbd;
+  width: 205px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.copyright__text {
+  margin: 0;
+  margin-right: 2px;
+}
+
+.copyright__link {
+  color: #bdbdbd;
+  padding-right: 16px;
+  display: block;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 12px;
+    right: 0;
+    width: 12px;
+    height: 16px;
+    mask-repeat: no-repeat;
+    background-color: #bdbdbd;
+    mask-image: url("../../icons/stack.svg#logo-html-academy");
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background-color: $color-secondary;
+  }
+
+  &:active::after {
+    background-color: #593cac;
+  }
+}
+
+.copyright__link:hover .copyright__link-text,
+.copyright__link:focus .copyright__link-text {
+  color: $color-secondary;
+}
+
+.copyright__link:active .copyright__link-text {
+  color: #593cac;
+}

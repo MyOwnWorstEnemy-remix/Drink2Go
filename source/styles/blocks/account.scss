@@ -1,0 +1,77 @@
+.account {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $desktop-width) {
+    min-width: 250px;
+  }
+}
+
+.account__item {
+  position: relative;
+  width: 60px;
+  height: 60px;
+
+  @media (min-width: $desktop-width) {
+    min-width: 112px;
+  }
+}
+
+.account__item .account__link:active {
+  background-color: #f0ebff;
+}
+
+.account__link {
+  display: block;
+  position: relative;
+  width: 60px;
+  height: 60px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 22px;
+    left: 22px;
+    width: 16px;
+    height: 16px;
+    mask-repeat: no-repeat;
+    background-color: #333333;
+  }
+
+  &:hover::after,
+  &:focus::after,
+  &:active::after {
+    background-color: $color-secondary;
+  }
+
+  &--user::after {
+    mask-image: url("../../icons/stack.svg#user");
+  }
+
+  &--basket::after {
+    mask-image: url("../../icons/stack.svg#basket");
+  }
+}
+
+.account__link-text {
+  @media (min-width: $desktop-width) {
+    display: block;
+    min-width: 48px;
+    min-height: 16px;
+    position: relative;
+    padding: 22px 20px 22px 50px;
+    font-size: 12px;
+    line-height: 16px;
+    color: $text-color-primary;
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $color-secondary;
+    }
+  }
+}
+
+.account__link:active .account__link-text {
+  background-color: #f0ebff;
+}

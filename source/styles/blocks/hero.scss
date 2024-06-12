@@ -1,0 +1,141 @@
+.hero {
+  width: $mobile-width;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }
+}
+
+.hero__wrapper {
+  text-align: center;
+  color: $text-color-primary;
+  width: 280;
+  padding: 20px 20px 60px;
+  background-color: #f3ebe1;
+  margin: 0;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 608px;
+    padding: 60px 80px 0;
+    background: linear-gradient(#f3ebe1, #f3ebe1 77%, $background-color-primary 77%, $background-color-primary);
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    width: 1280px;
+    padding: 30px 80px 60px;
+    background: #f3ebe1;
+  }
+}
+
+.hero__slide-button {
+  width: 20px;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  background-color: inherit;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 11px 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 77%;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 100%;
+  }
+
+  &:disabled {
+    cursor: default;
+    background-color: #bdbdbd;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: 11px 20px;
+  }
+
+  &--previous{
+    left: 0;
+    background-image: url("../../icons/stack.svg#arrow-previous");
+
+    &:hover,
+    &:focus {
+      background-image: url("../../icons/stack.svg#arrow-previous"), linear-gradient(to right, #ffffff, transparent);
+      background-size: 11px 20px, 100%;
+    }
+
+    &:active {
+      background-image: url("../../icons/stack.svg#arrow-previous"), linear-gradient(to right, rgba(120, 89, 207, 0.25), transparent);
+    }
+
+    &:disabled {
+      background-image: none;
+      mask-image: url("../../icons/stack.svg#arrow-previous");
+    }
+  }
+
+  &--next{
+    right: 0;
+    background-image: url("../../icons/stack.svg#arrow-next");
+
+    &:hover,
+    &:focus {
+      background-image: url("../../icons/stack.svg#arrow-next"), linear-gradient(to left, #ffffff, transparent);
+      background-size: 11px 20px, 100%;
+    }
+
+    &:active {
+      background-image: url("../../icons/stack.svg#arrow-next"), linear-gradient(to left, rgba(120, 89, 207, 0.25), transparent);
+    }
+
+    &:disabled {
+      background-image: none;
+      mask-image: url("../../icons/stack.svg#arrow-next");
+    }
+  }
+}
+
+.hero__pagination {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    gap: 8px;
+    width: 202px;
+    min-height: 24px;
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.hero__pagination-link {
+  width: 62px;
+  height: 4px;
+  border: none;
+  background-color: $background-color-primary;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: #7859cf;
+    opacity: 0.25;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  &--current {
+    background-color: #7859cf;
+  }
+}
+

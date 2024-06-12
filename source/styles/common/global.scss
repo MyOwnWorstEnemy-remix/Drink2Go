@@ -1,0 +1,16 @@
+body {
+  font-family: $primary-font;
+  background-color: $background-color-primary;
+  font-size: 12px;
+  line-height: 16px;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  display: grid;
+}
+
+a {
+  text-decoration: none;
+}

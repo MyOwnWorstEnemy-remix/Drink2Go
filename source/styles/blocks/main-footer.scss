@@ -1,0 +1,54 @@
+.main-footer__wrapper {
+  background-color: $background-color-primary;
+  width: 320px;
+  margin: 0 auto;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 728px;
+    padding: 42px 20px 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1360px;
+    padding: 22px 40px;
+    gap: 29px;
+  }
+}
+
+.main-footer__section {
+  width: 280px;
+  padding: 22px 20px;
+  position: relative;
+  display: block;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #f0ebff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &:last-child {
+    &::before {
+      content: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    display: inline;
+    padding: 0;
+    background-color: inherit;
+
+    &::before {
+      content: none;
+    }
+  }
+}
